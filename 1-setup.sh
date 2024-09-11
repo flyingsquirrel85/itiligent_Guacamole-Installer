@@ -7,7 +7,7 @@
 #######################################################################################################################
 
 # To install the latest code snapshot:
-# wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
+# wget https://raw.githubusercontent.com/flyingsquirrel85/itiligent_Guacamole-Installer/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
 
 # 1-setup.sh is a central script that manages all inputs, options and sequences other included 'install' scripts.
 # 2-install-guacamole downloads Guacamole source and exectutes all Guacamole's build instructions.
