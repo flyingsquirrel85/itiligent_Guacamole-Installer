@@ -13,7 +13,7 @@ This modular suite of build and management scripts makes provisioning a secure G
 🚀 To start building your Guacamole appliance, paste the below link into a terminal & follow the prompts (**A secure build requires that you do NOT run this script as sudo or root, however the script will prompt for sudo as needed**): 
 
 ```shell
-wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
+wget https://raw.githubusercontent.com/flyingsquirrel85/itiligent_Guacamole-Installer/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
 ```
 
 ## Prerequisites
@@ -68,7 +68,7 @@ wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.
 
 ## Customise & Brand Your Guacamole Theme
 
-🎨 **Want to give Guacamole your own personal touch? Follow the theme and branding instructions** [here](https://github.com/itiligent/Guacamole-Install/tree/main/guac-custom-theme-builder). To revert to the default theme, after install simply delete the branding.jar file from `/etc/guacamole/extensions`, clear your browser cache, then run:
+🎨 **Want to give Guacamole your own personal touch? Follow the theme and branding instructions** [here](https://github.com/flyingsquirrel85/itiligent_Guacamole-Installer/tree/main/guac-custom-theme-builder). To revert to the default theme, after install simply delete the branding.jar file from `/etc/guacamole/extensions`, clear your browser cache, then run:
 
 ```shell
 TOMCAT=$(ls /etc/ | grep tomcat) && sudo systemctl restart ${TOMCAT} && sudo systemctl restart guacd
@@ -81,7 +81,7 @@ TOMCAT=$(ls /etc/ | grep tomcat) && sudo systemctl restart ${TOMCAT} && sudo sys
 
 ## Active Directory SSO Integration
 
-🔑 **Need help with Active Directory integration & SSO authentication?** Check [here](https://github.com/itiligent/Guacamole-Install/blob/main/ACTIVE-DIRECTORY-HOW-TO.md).
+🔑 **Need help with Active Directory integration & SSO authentication?** Check [here](https://github.com/flyingsquirrel85/itiligent_Guacamole-Installer/blob/main/ACTIVE-DIRECTORY-HOW-TO.md).
 
 ## Upgrading Guacamole
 
@@ -91,7 +91,7 @@ TOMCAT=$(ls /etc/ | grep tomcat) && sudo systemctl restart ${TOMCAT} && sudo sys
 
 👔 **Did you know that Guacamole can run in a load-balanced high availability farm with layered physical/virtual separation between front end, application, and database layers?**
 
-- **For a separate DATABASE layer:** Use the `install-mysql-backend-only.sh` [here](https://github.com/itiligent/Guacamole-Install/tree/main/guac-enterprise-build) to install a standalone instance of the Guacamole MySQL database.
+- **For a separate DATABASE layer:** Use the `install-mysql-backend-only.sh` [here](https://github.com/flyingsquirrel85/itiligent_Guacamole-Installer/blob/main/guac-enterprise-build/install-mysql-backend-only.sh) to install a standalone instance of the Guacamole MySQL database.
 - **For a separate APPLICATION layer:** Run 1-setup.sh and point new installations to your separate/remote backend database. Just say **no** to the "Install MySQL locally" option and any other local reverse proxy install options.
 - **For a separate WEB layer:** Use the included Nginx installer scripts to build the basis of a separate TLS front end layer, and then apply your preferred Nginx load balancing technique. There are too many load balancing strategies to list here, but as an example [HA Proxy](https://www.haproxy.org/) generally provides superior session persistence & affinity under load-balanced conditions [compared to Open Source Nginx](https://www.nginx.com/products/nginx/compare-models/).
 
